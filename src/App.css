@@ -1,0 +1,34 @@
+model-viewer {
+    width: 100%;
+    height: 100%;
+}
+
+model-viewer:active {
+    cursor: grabbing;
+}
+
+model-viewer .userInput.show[style*="cursor: grab;"] {
+    cursor: none !important;
+}
+
+model-viewer button {
+    --min-hotspot-opacity: 0;
+}
+
+img {
+    user-select: none;
+}
+
+#circle-loader {
+    animation: rotate 1.25s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
